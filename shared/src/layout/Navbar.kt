@@ -23,19 +23,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import dev.tomaswild.portfolio.adaptive.ScreenSize
 import dev.tomaswild.portfolio.localization.AppLanguage
+import dev.tomaswild.portfolio.navigation.NavSection
 import dev.tomaswild.portfolio.resources.*
-import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-
-enum class NavSection(
-    val label: StringResource,
-) {
-    About(label = Res.string.navigation_about),
-    Experience(label = Res.string.navigation_experience),
-    Projects(label = Res.string.navigation_projects),
-    Contact(label = Res.string.navigation_contact),
-}
 
 @Composable
 fun Navbar(
