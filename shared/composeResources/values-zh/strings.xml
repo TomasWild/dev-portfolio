@@ -12,4 +12,13 @@
     <string name="language_change">切换语言</string>
     <string name="menu_open">打开菜单</string>
     <string name="menu_close">关闭菜单</string>
+
+    <string name="hero_greeting">你好，我是</string>
+    <string name="hero_name">Tomás Wild</string>
+    <string name="hero_career">软件开发工程师</string>
+    <string name="hero_introduction">我使用 Kotlin Multiplatform 开发高性能、精致的 Android、iOS、桌面端和 Web 应用。</string>
+    <string name="hero_primary_action">联系我</string>
+    <string name="hero_secondary_action">下载简历</string>
+    <string name="hero_social_links_label">关注我：</string>
+    <string name="hero_skills_label">我使用的技术：</string>
 </resources>

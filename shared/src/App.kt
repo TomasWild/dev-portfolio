@@ -3,11 +3,15 @@ package dev.tomaswild.portfolio
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFontFamilyResolver
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
@@ -20,6 +24,7 @@ import dev.tomaswild.portfolio.localization.AppLanguage
 import dev.tomaswild.portfolio.localization.customAppLocale
 import dev.tomaswild.portfolio.resources.NotoSansSC_VariableFont_wght
 import dev.tomaswild.portfolio.resources.Res
+import dev.tomaswild.portfolio.section.Hero
 import dev.tomaswild.portfolio.ui.theme.AppTheme
 import org.jetbrains.compose.reload.DevelopmentEntryPoint
 import org.jetbrains.compose.resources.ExperimentalResourceApi
@@ -35,7 +40,9 @@ fun App() {
 
     LaunchedEffect(key1 = font) {
         font?.let {
-            fontFamilyResolver.preload(FontFamily(it))
+            fontFamilyResolver.preload(
+                fontFamily = FontFamily(it),
+            )
         }
     }
 
@@ -60,6 +67,29 @@ fun App() {
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = Alignment.TopCenter,
             ) {
+                Column(
+                    modifier = Modifier
+                        .widthIn(max = 1100.dp)
+                        .fillMaxSize()
+                        .verticalScroll(state = rememberScrollState())
+                        .padding(
+                            start = horizontalPadding,
+                            end = horizontalPadding,
+                            top = when (screenSize) {
+                                ScreenSize.Medium -> 24.dp + 120.dp + 24.dp
+                                else -> 24.dp + 64.dp + 24.dp
+                            },
+                            bottom = 24.dp,
+                        ),
+                    verticalArrangement = Arrangement.spacedBy(space = 24.dp),
+                ) {
+                    Hero(
+                        screenSize = screenSize,
+                        onPrimaryClick = { /* TODO */ },
+                        onSecondaryClick = { /* TODO */ },
+                    )
+                }
+
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -87,6 +117,17 @@ fun App() {
                             onLanguageChange = { customAppLocale = it.code },
                         )
                     }
+
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(height = 24.dp)
+                            .background(
+                                brush = Brush.verticalGradient(
+                                    colors = listOf(MaterialTheme.colorScheme.background, Color.Transparent),
+                                ),
+                            ),
+                    )
                 }
             }
         }

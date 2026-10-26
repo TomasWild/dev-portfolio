@@ -12,4 +12,13 @@
     <string name="language_change">Change language</string>
     <string name="menu_open">Open menu</string>
     <string name="menu_close">Close menu</string>
+
+    <string name="hero_greeting">Hi, I'm</string>
+    <string name="hero_name">Tomás Wild</string>
+    <string name="hero_career">Software Developer</string>
+    <string name="hero_introduction">I build fast, polished apps for Android, iOS, desktop, and web with Kotlin Multiplatform.</string>
+    <string name="hero_primary_action">Get in touch</string>
+    <string name="hero_secondary_action">Download CV</string>
+    <string name="hero_social_links_label">Follow me:</string>
+    <string name="hero_skills_label">Technologies I work with:</string>
 </resources>

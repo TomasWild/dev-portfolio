@@ -12,4 +12,13 @@
     <string name="language_change">Cambiar idioma</string>
     <string name="menu_open">Abrir menú</string>
     <string name="menu_close">Cerrar menú</string>
+
+    <string name="hero_greeting">Hola, soy</string>
+    <string name="hero_name">Tomás Wild</string>
+    <string name="hero_career">Desarrollador de Software</string>
+    <string name="hero_introduction">Desarrollo aplicaciones rápidas y pulidas para Android, iOS, escritorio y web con Kotlin Multiplatform.</string>
+    <string name="hero_primary_action">Contactame</string>
+    <string name="hero_secondary_action">Descargar CV</string>
+    <string name="hero_social_links_label">Seguime:</string>
+    <string name="hero_skills_label">Tecnologías con las que trabajo:</string>
 </resources>
