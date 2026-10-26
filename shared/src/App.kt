@@ -24,6 +24,7 @@ import dev.tomaswild.portfolio.localization.AppLanguage
 import dev.tomaswild.portfolio.localization.customAppLocale
 import dev.tomaswild.portfolio.resources.NotoSansSC_VariableFont_wght
 import dev.tomaswild.portfolio.resources.Res
+import dev.tomaswild.portfolio.section.About
 import dev.tomaswild.portfolio.section.Hero
 import dev.tomaswild.portfolio.ui.theme.AppTheme
 import org.jetbrains.compose.reload.DevelopmentEntryPoint
@@ -88,6 +89,8 @@ fun App() {
                         onPrimaryClick = { /* TODO */ },
                         onSecondaryClick = { /* TODO */ },
                     )
+
+                    About(screenSize = screenSize)
                 }
 
                 Column(

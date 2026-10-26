@@ -21,4 +21,16 @@
     <string name="hero_secondary_action">下载简历</string>
     <string name="hero_social_links_label">关注我：</string>
     <string name="hero_skills_label">我使用的技术：</string>
+
+    <string name="about_eyebrow">关于我</string>
+    <string name="about_title">打造可靠的软件，从后端到用户界面</string>
+    <string name="about_paragraph_1">我是一名软件开发者，喜欢参与应用的各个层面，从使用 Kotlin、Spring Boot 和 Ktor 构建的后端服务，到使用 Compose Multiplatform 开发的精致应用。</string>
+    <string name="about_paragraph_2">我重视简洁、易维护的代码、合理的架构设计以及直观的用户界面。我喜欢将想法转化为结构清晰的软件，使其易于维护、扩展和持续改进。</string>
+    <string name="about_paragraph_3">我一直在探索新技术，并分享自己的学习成果。我也使用 Compose Multiplatform 开发了这个作品集，将自己在软件开发中坚持的原则应用于其中。</string>
+    <string name="about_experience_value">&lt; 1年</string>
+    <string name="about_experience_label">使用 Kotlin 和 JVM 生态系统的专业工作经验</string>
+    <string name="about_specialization_value">全栈开发</string>
+    <string name="about_specialization_label">使用 Kotlin 进行后端、Android 和 Web 开发</string>
+    <string name="about_languages_value">3种语言</string>
+    <string name="about_languages_label">西班牙语、英语和初级中文</string>
 </resources>

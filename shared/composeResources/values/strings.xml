@@ -21,4 +21,16 @@
     <string name="hero_secondary_action">Download CV</string>
     <string name="hero_social_links_label">Follow me:</string>
     <string name="hero_skills_label">Technologies I work with:</string>
+
+    <string name="about_eyebrow">About me</string>
+    <string name="about_title">Building reliable software, from backend to UI</string>
+    <string name="about_paragraph_1">I'm a software developer who enjoys working across the stack, from backend services built with Kotlin, Spring Boot, and Ktor to polished applications with Compose Multiplatform.</string>
+    <string name="about_paragraph_2">I value clean, maintainable code, thoughtful architecture, and intuitive user interfaces. I enjoy turning ideas into well-structured software that's easy to maintain, extend, and build upon.</string>
+    <string name="about_paragraph_3">I'm always exploring new technologies and sharing what I learn. I also built this portfolio with Compose Multiplatform, applying the same principles I value in the software I develop.</string>
+    <string name="about_experience_value">&lt; 1 year</string>
+    <string name="about_experience_label">Of professional experience with Kotlin and the JVM ecosystem</string>
+    <string name="about_specialization_value">Full stack</string>
+    <string name="about_specialization_label">Backend, Android and web development with Kotlin</string>
+    <string name="about_languages_value">3 languages</string>
+    <string name="about_languages_label">Spanish, English, and beginner-level Chinese</string>
 </resources>

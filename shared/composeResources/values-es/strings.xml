@@ -21,4 +21,16 @@
     <string name="hero_secondary_action">Descargar CV</string>
     <string name="hero_social_links_label">Seguime:</string>
     <string name="hero_skills_label">Tecnologías con las que trabajo:</string>
+
+    <string name="about_eyebrow">Sobre mí</string>
+    <string name="about_title">Desarrollo de software confiable, del backend a la interfaz</string>
+    <string name="about_paragraph_1">Soy desarrollador de software y disfruto trabajar en distintas capas de una aplicación, desde servicios backend desarrollados con Kotlin, Spring Boot y Ktor hasta aplicaciones cuidadas al detalle con Compose Multiplatform.</string>
+    <string name="about_paragraph_2">Valoro el código limpio y mantenible, una arquitectura bien pensada y las interfaces intuitivas. Me gusta transformar ideas en software bien estructurado, fácil de mantener, ampliar y evolucionar.</string>
+    <string name="about_paragraph_3">Siempre estoy explorando nuevas tecnologías y compartiendo lo que aprendo. También desarrollé este portfolio con Compose Multiplatform, aplicando los mismos principios que valoro en el software que creo.</string>
+    <string name="about_experience_value">&lt; 1 año</string>
+    <string name="about_experience_label">De experiencia profesional con Kotlin y el ecosistema JVM</string>
+    <string name="about_specialization_value">Full stack</string>
+    <string name="about_specialization_label">Desarrollo backend, Android y web con Kotlin</string>
+    <string name="about_languages_value">3 idiomas</string>
+    <string name="about_languages_label">Español, inglés y chino a nivel principiante</string>
 </resources>
