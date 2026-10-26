@@ -1,0 +1,15 @@
+<resources>
+    <string name="navigation_about">Sobre mí</string>
+    <string name="navigation_experience">Experiencia</string>
+    <string name="navigation_projects">Proyectos</string>
+    <string name="navigation_contact">Contacto</string>
+    <string name="navigation_home_tooltip">Inicio</string>
+    <string name="navigation_language_tooltip">Idioma</string>
+    <string name="navigation_theme_tooltip">Tema</string>
+    <string name="navigation_menu_tooltip">Menú</string>
+    <string name="theme_switch_to_light">Cambiar al tema claro</string>
+    <string name="theme_switch_to_dark">Cambiar al tema oscuro</string>
+    <string name="language_change">Cambiar idioma</string>
+    <string name="menu_open">Abrir menú</string>
+    <string name="menu_close">Cerrar menú</string>
+</resources>

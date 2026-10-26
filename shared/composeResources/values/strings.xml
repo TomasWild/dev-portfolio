@@ -1,0 +1,15 @@
+<resources>
+    <string name="navigation_about">About</string>
+    <string name="navigation_experience">Experience</string>
+    <string name="navigation_projects">Projects</string>
+    <string name="navigation_contact">Contact</string>
+    <string name="navigation_home_tooltip">Home</string>
+    <string name="navigation_language_tooltip">Language</string>
+    <string name="navigation_theme_tooltip">Theme</string>
+    <string name="navigation_menu_tooltip">Menu</string>
+    <string name="theme_switch_to_light">Switch to light theme</string>
+    <string name="theme_switch_to_dark">Switch to dark theme</string>
+    <string name="language_change">Change language</string>
+    <string name="menu_open">Open menu</string>
+    <string name="menu_close">Close menu</string>
+</resources>

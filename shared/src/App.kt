@@ -1,14 +1,20 @@
 package dev.tomaswild.portfolio
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFontFamilyResolver
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.tomaswild.portfolio.adaptive.ScreenSize
 import dev.tomaswild.portfolio.adaptive.currentScreenSize
+import dev.tomaswild.portfolio.layout.Navbar
 import dev.tomaswild.portfolio.localization.AppEnvironment
 import dev.tomaswild.portfolio.localization.AppLanguage
 import dev.tomaswild.portfolio.localization.customAppLocale
@@ -48,6 +54,40 @@ fun App() {
                 ScreenSize.Compact -> 16.dp
                 ScreenSize.Medium -> 32.dp
                 ScreenSize.Expanded -> 48.dp
+            }
+
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.TopCenter,
+            ) {
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(color = MaterialTheme.colorScheme.background)
+                            .safeContentPadding(),
+                        contentAlignment = Alignment.TopCenter,
+                    ) {
+                        Navbar(
+                            modifier = Modifier
+                                .widthIn(max = 1100.dp)
+                                .fillMaxWidth()
+                                .padding(
+                                    horizontal = horizontalPadding,
+                                    vertical = 24.dp,
+                                ),
+                            screenSize = screenSize,
+                            isDarkTheme = isDarkTheme,
+                            language = language,
+                            onHomeClick = { /* TODO */ },
+                            onItemClick = { /* TODO */ },
+                            onToggleTheme = { isDarkTheme = !isDarkTheme },
+                            onLanguageChange = { customAppLocale = it.code },
+                        )
+                    }
+                }
             }
         }
     }

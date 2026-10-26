@@ -1,0 +1,15 @@
+<resources>
+    <string name="navigation_about">关于我</string>
+    <string name="navigation_experience">工作经历</string>
+    <string name="navigation_projects">项目</string>
+    <string name="navigation_contact">联系方式</string>
+    <string name="navigation_home_tooltip">首页</string>
+    <string name="navigation_language_tooltip">语言</string>
+    <string name="navigation_theme_tooltip">主题</string>
+    <string name="navigation_menu_tooltip">菜单</string>
+    <string name="theme_switch_to_light">切换到浅色主题</string>
+    <string name="theme_switch_to_dark">切换到深色主题</string>
+    <string name="language_change">切换语言</string>
+    <string name="menu_open">打开菜单</string>
+    <string name="menu_close">关闭菜单</string>
+</resources>
