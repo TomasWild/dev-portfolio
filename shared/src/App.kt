@@ -1,15 +1,54 @@
 package dev.tomaswild.portfolio
 
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.Composable
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.platform.LocalFontFamilyResolver
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import dev.tomaswild.portfolio.adaptive.ScreenSize
+import dev.tomaswild.portfolio.adaptive.currentScreenSize
+import dev.tomaswild.portfolio.localization.AppEnvironment
+import dev.tomaswild.portfolio.localization.AppLanguage
+import dev.tomaswild.portfolio.localization.customAppLocale
+import dev.tomaswild.portfolio.resources.NotoSansSC_VariableFont_wght
+import dev.tomaswild.portfolio.resources.Res
+import dev.tomaswild.portfolio.ui.theme.AppTheme
 import org.jetbrains.compose.reload.DevelopmentEntryPoint
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.preloadFont
 
+@OptIn(ExperimentalResourceApi::class)
 @Composable
 @Preview
 @DevelopmentEntryPoint
 fun App() {
-    MaterialTheme {
+    val fontFamilyResolver = LocalFontFamilyResolver.current
+    val font by preloadFont(resource = Res.font.NotoSansSC_VariableFont_wght)
 
+    LaunchedEffect(key1 = font) {
+        font?.let {
+            fontFamilyResolver.preload(FontFamily(it))
+        }
+    }
+
+    val language = AppLanguage.entries.firstOrNull { it.code == customAppLocale }
+        ?: AppLanguage.ENGLISH
+
+    val systemDark = isSystemInDarkTheme()
+    var isDarkTheme by rememberSaveable { mutableStateOf(value = systemDark) }
+
+    AppTheme(
+        darkTheme = isDarkTheme,
+    ) {
+        AppEnvironment {
+            val screenSize = currentScreenSize()
+            val horizontalPadding = when (screenSize) {
+                ScreenSize.Compact -> 16.dp
+                ScreenSize.Medium -> 32.dp
+                ScreenSize.Expanded -> 48.dp
+            }
+        }
     }
 }
