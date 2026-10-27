@@ -39,4 +39,19 @@
     <string name="experience_epam_company">EPAM Systems</string>
     <string name="experience_epam_period">2026 年至今</string>
     <string name="experience_epam_description">使用 Kotlin 和 Jetpack Compose 开发 Android 应用，通过实践项目积累现代 Android 开发、用户界面设计和应用架构方面的经验。</string>
+
+    <string name="contact_title">联系我</string>
+    <string name="contact_name_label">姓名</string>
+    <string name="contact_name_placeholder">请输入姓名...</string>
+    <string name="contact_email_label">电子邮箱</string>
+    <string name="contact_email_placeholder">your@email.com</string>
+    <string name="contact_message_label">留言</string>
+    <string name="contact_message_placeholder">请输入留言...</string>
+    <string name="contact_send_button">发送消息</string>
+    <string name="contact_details_title">联系方式</string>
+    <string name="contact_email_heading">电子邮箱</string>
+    <string name="contact_phone_heading">电话</string>
+    <string name="contact_location_heading">所在地</string>
+    <string name="contact_availability_status">目前可承接新项目</string>
+    <string name="contact_availability_description">我目前正在寻找新的工作机会和有意思的项目。无论你需要一名全职开发者还是自由职业顾问，都欢迎与我联系！</string>
 </resources>

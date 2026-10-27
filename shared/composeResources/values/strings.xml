@@ -39,4 +39,19 @@
     <string name="experience_epam_company">EPAM Systems</string>
     <string name="experience_epam_period">2026 – Present</string>
     <string name="experience_epam_description">Developing Android applications with Kotlin and Jetpack Compose, building practical skills in modern Android development, UI design, and application architecture through hands-on projects.</string>
+
+    <string name="contact_title">Get In Touch</string>
+    <string name="contact_name_label">Name</string>
+    <string name="contact_name_placeholder">Your name...</string>
+    <string name="contact_email_label">Email</string>
+    <string name="contact_email_placeholder">your@email.com</string>
+    <string name="contact_message_label">Message</string>
+    <string name="contact_message_placeholder">Your message...</string>
+    <string name="contact_send_button">Send Message</string>
+    <string name="contact_details_title">Contact Information</string>
+    <string name="contact_email_heading">Email</string>
+    <string name="contact_phone_heading">Phone</string>
+    <string name="contact_location_heading">Location</string>
+    <string name="contact_availability_status">Currently Available</string>
+    <string name="contact_availability_description">I'm currently open to new opportunities and exciting projects. Whether you need a full-time developer or a freelance consultant, let's talk!</string>
 </resources>
