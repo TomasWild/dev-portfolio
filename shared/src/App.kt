@@ -25,6 +25,7 @@ import dev.tomaswild.portfolio.localization.customAppLocale
 import dev.tomaswild.portfolio.resources.NotoSansSC_VariableFont_wght
 import dev.tomaswild.portfolio.resources.Res
 import dev.tomaswild.portfolio.section.About
+import dev.tomaswild.portfolio.section.Experience
 import dev.tomaswild.portfolio.section.Hero
 import dev.tomaswild.portfolio.ui.theme.AppTheme
 import org.jetbrains.compose.reload.DevelopmentEntryPoint
@@ -91,6 +92,8 @@ fun App() {
                     )
 
                     About(screenSize = screenSize)
+
+                    Experience(screenSize = screenSize)
                 }
 
                 Column(

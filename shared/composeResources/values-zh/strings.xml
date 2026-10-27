@@ -33,4 +33,10 @@
     <string name="about_specialization_label">使用 Kotlin 进行后端、Android 和 Web 开发</string>
     <string name="about_languages_value">3种语言</string>
     <string name="about_languages_label">西班牙语、英语和初级中文</string>
+
+    <string name="experience_title">职业发展历程</string>
+    <string name="experience_epam_role">Android 开发培训生</string>
+    <string name="experience_epam_company">EPAM Systems</string>
+    <string name="experience_epam_period">2026 年至今</string>
+    <string name="experience_epam_description">使用 Kotlin 和 Jetpack Compose 开发 Android 应用，通过实践项目积累现代 Android 开发、用户界面设计和应用架构方面的经验。</string>
 </resources>

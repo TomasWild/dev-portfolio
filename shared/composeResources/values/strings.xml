@@ -33,4 +33,10 @@
     <string name="about_specialization_label">Backend, Android and web development with Kotlin</string>
     <string name="about_languages_value">3 languages</string>
     <string name="about_languages_label">Spanish, English, and beginner-level Chinese</string>
+
+    <string name="experience_title">Career Journey</string>
+    <string name="experience_epam_role">Android Development Trainee</string>
+    <string name="experience_epam_company">EPAM Systems</string>
+    <string name="experience_epam_period">2026 – Present</string>
+    <string name="experience_epam_description">Developing Android applications with Kotlin and Jetpack Compose, building practical skills in modern Android development, UI design, and application architecture through hands-on projects.</string>
 </resources>
