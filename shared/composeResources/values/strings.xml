@@ -54,4 +54,6 @@
     <string name="contact_location_heading">Location</string>
     <string name="contact_availability_status">Currently Available</string>
     <string name="contact_availability_description">I'm currently open to new opportunities and exciting projects. Whether you need a full-time developer or a freelance consultant, let's talk!</string>
+
+    <string name="footer_copyright">© %1$d Tomás Wild. All rights reserved.</string>
 </resources>

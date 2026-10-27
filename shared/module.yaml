@@ -20,3 +20,4 @@ dependencies:
   - $libs.androidx.lifecycle.viewmodel.compose
   - $libs.androidx.lifecycle.runtime.compose
   - $libs.material3.adaptive
+  - $libs.kotlinx.datetime

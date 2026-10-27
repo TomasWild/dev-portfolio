@@ -18,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.tomaswild.portfolio.adaptive.ScreenSize
 import dev.tomaswild.portfolio.adaptive.currentScreenSize
+import dev.tomaswild.portfolio.layout.Footer
 import dev.tomaswild.portfolio.layout.Navbar
 import dev.tomaswild.portfolio.localization.AppEnvironment
 import dev.tomaswild.portfolio.localization.AppLanguage
@@ -99,6 +100,11 @@ fun App() {
                     Contact(
                         screenSize = screenSize,
                         onSendClick = { /* TODO */ },
+                    )
+
+                    Footer(
+                        screenSize = screenSize,
+                        onNavigate = { /* TODO */ },
                     )
                 }
 

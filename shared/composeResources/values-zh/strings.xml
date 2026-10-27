@@ -54,4 +54,6 @@
     <string name="contact_location_heading">所在地</string>
     <string name="contact_availability_status">目前可承接新项目</string>
     <string name="contact_availability_description">我目前正在寻找新的工作机会和有意思的项目。无论你需要一名全职开发者还是自由职业顾问，都欢迎与我联系！</string>
+
+    <string name="footer_copyright">© %1$d Tomás Wild。保留所有权利。</string>
 </resources>
