@@ -21,11 +21,16 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import dev.tomaswild.portfolio.adaptive.ScreenSize
 import dev.tomaswild.portfolio.config.SocialMediaLinks
-import dev.tomaswild.portfolio.model.Skill
 import dev.tomaswild.portfolio.resources.*
 import kotlinx.coroutines.isActive
+import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
+
+private data class Skill(
+    val name: String,
+    val icon: DrawableResource,
+)
 
 @Composable
 fun Hero(
@@ -97,7 +102,7 @@ fun Hero(
                 HeroContent(
                     nameStyle = MaterialTheme.typography.displayLarge,
                     horizontalAlignment = Alignment.Start,
-                    textAlign = TextAlign.Start,
+                    textAlign = TextAlign.Justify,
                     onPrimaryClick = onPrimaryClick,
                     onSecondaryClick = onSecondaryClick,
                     modifier = Modifier.weight(weight = 1F),
