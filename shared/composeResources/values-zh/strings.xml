@@ -40,6 +40,12 @@
     <string name="experience_epam_period">2026 年至今</string>
     <string name="experience_epam_description">使用 Kotlin 和 Jetpack Compose 开发 Android 应用，通过实践项目积累现代 Android 开发、用户界面设计和应用架构方面的经验。</string>
 
+    <string name="projects_title">项目</string>
+    <string name="project_code_button">源代码</string>
+    <string name="project_live_demo_button">在线演示</string>
+    <string name="project_developer_portfolio_title">开发者作品集</string>
+    <string name="project_developer_portfolio_description">一个响应式开发者作品集网站，展示我的项目、技术技能和经验，使用 Kotlin 和 Compose Multiplatform 构建。</string>
+
     <string name="contact_title">联系我</string>
     <string name="contact_name_label">姓名</string>
     <string name="contact_name_placeholder">请输入姓名...</string>

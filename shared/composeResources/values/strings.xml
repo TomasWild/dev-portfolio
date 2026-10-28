@@ -40,6 +40,12 @@
     <string name="experience_epam_period">2026 – Present</string>
     <string name="experience_epam_description">Developing Android applications with Kotlin and Jetpack Compose, building practical skills in modern Android development, UI design, and application architecture through hands-on projects.</string>
 
+    <string name="projects_title">Projects</string>
+    <string name="project_code_button">Code</string>
+    <string name="project_live_demo_button">Live Demo</string>
+    <string name="project_developer_portfolio_title">Developer Portfolio</string>
+    <string name="project_developer_portfolio_description">A responsive developer portfolio showcasing my projects, technical skills, and experience, built with Kotlin and Compose Multiplatform for the web.</string>
+
     <string name="contact_title">Get In Touch</string>
     <string name="contact_name_label">Name</string>
     <string name="contact_name_placeholder">Your name...</string>
