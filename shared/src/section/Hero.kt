@@ -161,7 +161,7 @@ private fun HeroContent(
             modifier = Modifier.widthIn(max = 520.dp),
         )
 
-        Spacer(Modifier.height(height = 8.dp))
+        Spacer(modifier = Modifier.height(height = 8.dp))
 
         FlowRow(
             horizontalArrangement = Arrangement.spacedBy(

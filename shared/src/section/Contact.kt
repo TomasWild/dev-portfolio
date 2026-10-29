@@ -201,7 +201,6 @@ private fun FormField(
             value = value,
             onValueChange = onValueChange,
             modifier = fieldModifier.fillMaxWidth(),
-            enabled = false,
             placeholder = {
                 Text(
                     text = placeholder,
