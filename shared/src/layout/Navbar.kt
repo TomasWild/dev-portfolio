@@ -33,7 +33,6 @@ fun Navbar(
     screenSize: ScreenSize,
     isDarkTheme: Boolean,
     language: AppLanguage,
-    onHomeClick: () -> Unit,
     onItemClick: (NavSection) -> Unit,
     onToggleTheme: () -> Unit,
     onLanguageChange: (AppLanguage) -> Unit,
@@ -71,7 +70,9 @@ fun Navbar(
                     ) {
                         LogoWithTooltip(
                             title = title,
-                            onClick = onHomeClick,
+                            onClick = {
+                                onItemClick(NavSection.HOME)
+                            },
                         )
 
                         Row(
@@ -112,7 +113,9 @@ fun Navbar(
                 ) {
                     LogoWithTooltip(
                         title = title,
-                        onClick = onHomeClick,
+                        onClick = {
+                            onItemClick(NavSection.HOME)
+                        },
                     )
 
                     if (screenSize != ScreenSize.Compact) {
@@ -392,15 +395,17 @@ private fun ExpandedNavActions(
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        NavSection.entries.forEach { section ->
-            TextButton(
-                onClick = { onItemClick(section) },
-            ) {
-                Text(
-                    text = stringResource(resource = section.label),
-                )
+        NavSection.entries
+            .filter { section -> section != NavSection.HOME }
+            .forEach { section ->
+                TextButton(
+                    onClick = { onItemClick(section) },
+                ) {
+                    Text(
+                        text = stringResource(resource = section.label),
+                    )
+                }
             }
-        }
     }
 }
 
@@ -451,19 +456,21 @@ private fun CompactNavActions(
             expanded = expanded,
             onDismissRequest = { expanded = false },
         ) {
-            NavSection.entries.forEach { section ->
-                DropdownMenuItem(
-                    text = {
-                        Text(
-                            text = stringResource(resource = section.label),
-                        )
-                    },
-                    onClick = {
-                        expanded = false
-                        onItemClick(section)
-                    },
-                )
-            }
+            NavSection.entries
+                .filter { section -> section != NavSection.HOME }
+                .forEach { section ->
+                    DropdownMenuItem(
+                        text = {
+                            Text(
+                                text = stringResource(resource = section.label),
+                            )
+                        },
+                        onClick = {
+                            expanded = false
+                            onItemClick(section)
+                        },
+                    )
+                }
         }
     }
 }

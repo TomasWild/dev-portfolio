@@ -3,8 +3,8 @@ package dev.tomaswild.portfolio
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -23,10 +23,13 @@ import dev.tomaswild.portfolio.layout.Navbar
 import dev.tomaswild.portfolio.localization.AppEnvironment
 import dev.tomaswild.portfolio.localization.AppLanguage
 import dev.tomaswild.portfolio.localization.customAppLocale
+import dev.tomaswild.portfolio.navigation.NavSection
+import dev.tomaswild.portfolio.navigation.listIndex
 import dev.tomaswild.portfolio.resources.NotoSansSC_VariableFont_wght
 import dev.tomaswild.portfolio.resources.Res
 import dev.tomaswild.portfolio.section.*
 import dev.tomaswild.portfolio.ui.theme.AppTheme
+import kotlinx.coroutines.launch
 import org.jetbrains.compose.reload.DevelopmentEntryPoint
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.preloadFont
@@ -64,47 +67,68 @@ fun App() {
                 ScreenSize.Expanded -> 48.dp
             }
 
+            val listState = rememberLazyListState()
+            val scope = rememberCoroutineScope()
+
+            val scrollToSection: (NavSection) -> Unit = { section ->
+                section.listIndex().let { index ->
+                    scope.launch { listState.animateScrollToItem(index = index) }
+                }
+            }
+
             Box(
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = Alignment.TopCenter,
             ) {
-                Column(
+                LazyColumn(
                     modifier = Modifier
                         .widthIn(max = 1100.dp)
-                        .fillMaxSize()
-                        .verticalScroll(state = rememberScrollState())
-                        .padding(
-                            start = horizontalPadding,
-                            end = horizontalPadding,
-                            top = when (screenSize) {
-                                ScreenSize.Medium -> 24.dp + 120.dp + 24.dp
-                                else -> 24.dp + 64.dp + 24.dp
-                            },
-                            bottom = 24.dp,
-                        ),
+                        .fillMaxSize(),
+                    state = listState,
+                    contentPadding = PaddingValues(
+                        start = horizontalPadding,
+                        end = horizontalPadding,
+                        top = when (screenSize) {
+                            ScreenSize.Medium -> 24.dp + 120.dp + 24.dp
+                            else -> 24.dp + 64.dp + 24.dp
+                        },
+                        bottom = 24.dp,
+                    ),
                     verticalArrangement = Arrangement.spacedBy(space = 24.dp),
                 ) {
-                    Hero(
-                        screenSize = screenSize,
-                        onPrimaryClick = { /* TODO */ },
-                        onSecondaryClick = { /* TODO */ },
-                    )
+                    item {
+                        Hero(
+                            screenSize = screenSize,
+                            onPrimaryClick = { scrollToSection(NavSection.CONTACT) },
+                            onSecondaryClick = { /* TODO */ },
+                        )
+                    }
 
-                    About(screenSize = screenSize)
+                    item {
+                        About(screenSize = screenSize)
+                    }
 
-                    Experience(screenSize = screenSize)
+                    item {
+                        Experience(screenSize = screenSize)
+                    }
 
-                    Projects(screenSize = screenSize)
+                    item {
+                        Projects(screenSize = screenSize)
+                    }
 
-                    Contact(
-                        screenSize = screenSize,
-                        onSendClick = { /* TODO */ },
-                    )
+                    item {
+                        Contact(
+                            screenSize = screenSize,
+                            onSendClick = { /* TODO */ },
+                        )
+                    }
 
-                    Footer(
-                        screenSize = screenSize,
-                        onNavigate = { /* TODO */ },
-                    )
+                    item {
+                        Footer(
+                            screenSize = screenSize,
+                            onNavigate = scrollToSection,
+                        )
+                    }
                 }
 
                 Column(
@@ -128,8 +152,7 @@ fun App() {
                             screenSize = screenSize,
                             isDarkTheme = isDarkTheme,
                             language = language,
-                            onHomeClick = { /* TODO */ },
-                            onItemClick = { /* TODO */ },
+                            onItemClick = scrollToSection,
                             onToggleTheme = { isDarkTheme = !isDarkTheme },
                             onLanguageChange = { customAppLocale = it.code },
                         )

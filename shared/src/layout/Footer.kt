@@ -155,21 +155,23 @@ private fun FooterNavigation(
         ),
         verticalArrangement = Arrangement.spacedBy(space = 4.dp),
     ) {
-        NavSection.entries.forEach { section ->
-            Text(
-                text = stringResource(resource = section.label),
-                modifier = Modifier
-                    .clip(shape = MaterialTheme.shapes.small)
-                    .clickable(role = Role.Button) {
-                        onNavigate(section)
-                    }
-                    .padding(
-                        horizontal = 8.dp,
-                        vertical = 4.dp,
-                    ),
-                style = MaterialTheme.typography.bodyMedium,
-            )
-        }
+        NavSection.entries
+            .filter { section -> section != NavSection.HOME }
+            .forEach { section ->
+                Text(
+                    text = stringResource(resource = section.label),
+                    modifier = Modifier
+                        .clip(shape = MaterialTheme.shapes.small)
+                        .clickable(role = Role.Button) {
+                            onNavigate(section)
+                        }
+                        .padding(
+                            horizontal = 8.dp,
+                            vertical = 4.dp,
+                        ),
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+            }
     }
 }
 

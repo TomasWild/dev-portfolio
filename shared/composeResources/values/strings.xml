@@ -1,4 +1,5 @@
 <resources>
+    <string name="navigation_home">Home</string>
     <string name="navigation_about">About</string>
     <string name="navigation_experience">Experience</string>
     <string name="navigation_projects">Projects</string>
