@@ -1,13 +1,11 @@
 package dev.tomaswild.portfolio
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -18,11 +16,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.tomaswild.portfolio.adaptive.ScreenSize
 import dev.tomaswild.portfolio.adaptive.currentScreenSize
+import dev.tomaswild.portfolio.config.LocalPreferences
+import dev.tomaswild.portfolio.config.ThemeMode
+import dev.tomaswild.portfolio.config.resolveIsDark
 import dev.tomaswild.portfolio.layout.Footer
 import dev.tomaswild.portfolio.layout.Navbar
 import dev.tomaswild.portfolio.localization.AppEnvironment
 import dev.tomaswild.portfolio.localization.AppLanguage
 import dev.tomaswild.portfolio.localization.customAppLocale
+import dev.tomaswild.portfolio.localization.setAppLanguage
 import dev.tomaswild.portfolio.navigation.NavSection
 import dev.tomaswild.portfolio.navigation.listIndex
 import dev.tomaswild.portfolio.resources.NotoSansSC_VariableFont_wght
@@ -53,8 +55,8 @@ fun App() {
     val language = AppLanguage.entries.firstOrNull { it.code == customAppLocale }
         ?: AppLanguage.ENGLISH
 
-    val systemDark = isSystemInDarkTheme()
-    var isDarkTheme by rememberSaveable { mutableStateOf(value = systemDark) }
+    var themeMode by remember { mutableStateOf(value = LocalPreferences.themeMode) }
+    val isDarkTheme = themeMode.resolveIsDark()
 
     AppTheme(
         darkTheme = isDarkTheme,
@@ -153,8 +155,16 @@ fun App() {
                             isDarkTheme = isDarkTheme,
                             language = language,
                             onItemClick = scrollToSection,
-                            onToggleTheme = { isDarkTheme = !isDarkTheme },
-                            onLanguageChange = { customAppLocale = it.code },
+                            onToggleTheme = {
+                                themeMode = if (isDarkTheme) {
+                                    ThemeMode.LIGHT
+                                } else {
+                                    ThemeMode.DARK
+                                }
+
+                                LocalPreferences.themeMode = themeMode
+                            },
+                            onLanguageChange = { setAppLanguage(it) },
                         )
                     }
 

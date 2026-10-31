@@ -2,6 +2,8 @@ package dev.tomaswild.portfolio.localization
 
 import androidx.compose.runtime.*
 import androidx.compose.ui.text.intl.Locale
+import dev.tomaswild.portfolio.config.LocalPreferences
+import kotlinx.browser.window
 
 enum class AppLanguage(
     val code: String,
@@ -12,7 +14,7 @@ enum class AppLanguage(
     CHINESE(code = "zh", displayName = "中文 - 简体"),
 }
 
-var customAppLocale by mutableStateOf<String?>(value = "en")
+var customAppLocale by mutableStateOf<String?>(value = initialLanguage())
 
 object AppLocale {
     private val localAppLocale = staticCompositionLocalOf { Locale.current }
@@ -49,4 +51,17 @@ private fun updateCustomLocale(value: String?) {
         }
         """
     )
+}
+
+fun setAppLanguage(language: AppLanguage) {
+    customAppLocale = language.code
+    LocalPreferences.language = language.code
+}
+
+private fun initialLanguage(): String {
+    val browser = window.navigator.language.substringBefore(delimiter = '-')
+
+    return AppLanguage.entries.firstOrNull { it.code == LocalPreferences.language }?.code
+        ?: AppLanguage.entries.firstOrNull { it.code == browser }?.code
+        ?: AppLanguage.ENGLISH.code
 }
