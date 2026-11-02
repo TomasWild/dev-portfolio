@@ -24,13 +24,18 @@
     </script>
 </head>
 <body style="text-align: center; align-content: center">
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50" role="presentation">
-    <circle cx="25" cy="25" r="20" stroke="#ccc" stroke-width="4" fill="none"/>
-    <circle cx="25" cy="25" r="20" stroke="#333" stroke-width="4" fill="none" stroke-linecap="round"
-            stroke-dasharray="90 125">
-        <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s"
-                          repeatCount="indefinite"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" role="presentation">
+    <circle cx="36" cy="36" r="32" stroke="var(--track)" stroke-width="3" fill="none"/>
+    <circle cx="36" cy="36" r="32" stroke="var(--accent)" stroke-width="3" fill="none"
+            stroke-linecap="round" stroke-dasharray="50 152">
+        <animateTransform attributeName="transform" type="rotate"
+                          from="0 36 36" to="360 36 36" dur="1.4s" repeatCount="indefinite"/>
     </circle>
+    <text x="36" y="43" text-anchor="middle" font-family="system-ui, sans-serif"
+          font-size="22" font-weight="600" fill="var(--fg)">
+        TW
+        <animate attributeName="opacity" values="1;0.4;1" dur="1.4s" repeatCount="indefinite"/>
+    </text>
 </svg>
 {{kotlin.scripts}}
 </body>

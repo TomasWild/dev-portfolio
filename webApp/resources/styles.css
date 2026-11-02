@@ -5,3 +5,24 @@ html, body {
     padding: 0;
     overflow: hidden;
 }
+
+:root {
+    --bg: #F7FBEE;
+    --fg: #181D15;
+    --accent: #195200;
+    --track: #DCE6D1;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #10150D;
+        --fg: #E0E4D7;
+        --accent: #8BDA68;
+        --track: #41493B;
+    }
+}
+
+body {
+    color: var(--fg);
+    background: var(--bg);
+}
