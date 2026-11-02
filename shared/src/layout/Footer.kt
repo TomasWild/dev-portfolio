@@ -27,9 +27,9 @@ private enum class SocialLink(
     val url: String,
     val icon: DrawableResource,
 ) {
-    GitHub(label = "GitHub", url = SocialMediaLinks.GITHUB, icon = Res.drawable.github),
-    LinkedIn(label = "LinkedIn", url = SocialMediaLinks.LINKEDIN, icon = Res.drawable.linkedin),
-    Bluesky(label = "Bluesky", url = SocialMediaLinks.BLUESKY, icon = Res.drawable.bluesky),
+    GITHUB(label = "GitHub", url = SocialMediaLinks.GITHUB, icon = Res.drawable.github),
+    LINKEDIN(label = "LinkedIn", url = SocialMediaLinks.LINKEDIN, icon = Res.drawable.linkedin),
+    BLUESKY(label = "Bluesky", url = SocialMediaLinks.BLUESKY, icon = Res.drawable.bluesky),
 }
 
 @Composable
