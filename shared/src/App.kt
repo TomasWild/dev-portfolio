@@ -101,8 +101,8 @@ fun App() {
                     item {
                         Hero(
                             screenSize = screenSize,
-                            onPrimaryClick = { scrollToSection(NavSection.CONTACT) },
-                            onSecondaryClick = { /* TODO */ },
+                            onContactClick = { scrollToSection(NavSection.CONTACT) },
+                            onDownloadCvClick = { /* TODO */ },
                         )
                     }
 

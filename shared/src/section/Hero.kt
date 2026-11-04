@@ -35,8 +35,8 @@ private data class Skill(
 @Composable
 fun Hero(
     screenSize: ScreenSize,
-    onPrimaryClick: () -> Unit,
-    onSecondaryClick: () -> Unit,
+    onContactClick: () -> Unit,
+    onDownloadCvClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val skills = listOf(
@@ -67,8 +67,8 @@ fun Hero(
                     nameStyle = MaterialTheme.typography.displaySmall,
                     horizontalAlignment = Alignment.CenterHorizontally,
                     textAlign = TextAlign.Center,
-                    onPrimaryClick = onPrimaryClick,
-                    onSecondaryClick = onSecondaryClick,
+                    onPrimaryClick = onContactClick,
+                    onSecondaryClick = onDownloadCvClick,
                     modifier = Modifier.fillMaxWidth(),
                 )
             }
@@ -84,8 +84,8 @@ fun Hero(
                     nameStyle = MaterialTheme.typography.displayMedium,
                     horizontalAlignment = Alignment.Start,
                     textAlign = TextAlign.Start,
-                    onPrimaryClick = onPrimaryClick,
-                    onSecondaryClick = onSecondaryClick,
+                    onPrimaryClick = onContactClick,
+                    onSecondaryClick = onDownloadCvClick,
                     modifier = Modifier.weight(weight = 1F),
                 )
 
@@ -103,8 +103,8 @@ fun Hero(
                     nameStyle = MaterialTheme.typography.displayLarge,
                     horizontalAlignment = Alignment.Start,
                     textAlign = TextAlign.Justify,
-                    onPrimaryClick = onPrimaryClick,
-                    onSecondaryClick = onSecondaryClick,
+                    onPrimaryClick = onContactClick,
+                    onSecondaryClick = onDownloadCvClick,
                     modifier = Modifier.weight(weight = 1F),
                 )
 
