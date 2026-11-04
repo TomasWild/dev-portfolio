@@ -31,9 +31,9 @@ fun About(
             .fillMaxWidth()
             .padding(
                 vertical = when (screenSize) {
-                    ScreenSize.Compact -> 24.dp
-                    ScreenSize.Medium -> 40.dp
-                    ScreenSize.Expanded -> 56.dp
+                    ScreenSize.COMPACT -> 24.dp
+                    ScreenSize.MEDIUM -> 40.dp
+                    ScreenSize.EXPANDED -> 56.dp
                 },
             ),
         verticalArrangement = Arrangement.spacedBy(space = 32.dp),
@@ -44,7 +44,7 @@ fun About(
         )
 
         when (screenSize) {
-            ScreenSize.Compact -> Column(
+            ScreenSize.COMPACT -> Column(
                 modifier = Modifier.fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(space = 24.dp),
             ) {
@@ -56,7 +56,7 @@ fun About(
             else -> Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(
-                    space = if (screenSize == ScreenSize.Expanded) {
+                    space = if (screenSize == ScreenSize.EXPANDED) {
                         64.dp
                     } else {
                         40.dp

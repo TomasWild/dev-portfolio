@@ -54,7 +54,7 @@ fun Hero(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         when (screenSize) {
-            ScreenSize.Compact -> Column(
+            ScreenSize.COMPACT -> Column(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 24.dp),
@@ -73,7 +73,7 @@ fun Hero(
                 )
             }
 
-            ScreenSize.Medium -> Row(
+            ScreenSize.MEDIUM -> Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 48.dp),
@@ -92,7 +92,7 @@ fun Hero(
                 ProfileImage(size = 240.dp)
             }
 
-            ScreenSize.Expanded -> Row(
+            ScreenSize.EXPANDED -> Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 72.dp),

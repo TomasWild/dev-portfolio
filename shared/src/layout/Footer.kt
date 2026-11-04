@@ -53,7 +53,7 @@ fun Footer(
         HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
 
         when (screenSize) {
-            ScreenSize.Compact -> Column(
+            ScreenSize.COMPACT -> Column(
                 verticalArrangement = Arrangement.spacedBy(space = 8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
@@ -68,7 +68,7 @@ fun Footer(
                 )
             }
 
-            ScreenSize.Medium -> Row(
+            ScreenSize.MEDIUM -> Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(space = 16.dp),
                 verticalAlignment = Alignment.CenterVertically,

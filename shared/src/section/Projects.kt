@@ -66,9 +66,9 @@ fun Projects(
         )
 
         val columns = when (screenSize) {
-            ScreenSize.Compact -> 1
-            ScreenSize.Medium -> 2
-            ScreenSize.Expanded -> 3
+            ScreenSize.COMPACT -> 1
+            ScreenSize.MEDIUM -> 2
+            ScreenSize.EXPANDED -> 3
         }
 
         projects.chunked(size = columns).forEach { rowProjects ->

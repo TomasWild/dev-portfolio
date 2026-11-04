@@ -64,9 +64,9 @@ fun App() {
         AppEnvironment {
             val screenSize = currentScreenSize()
             val horizontalPadding = when (screenSize) {
-                ScreenSize.Compact -> 16.dp
-                ScreenSize.Medium -> 32.dp
-                ScreenSize.Expanded -> 48.dp
+                ScreenSize.COMPACT -> 16.dp
+                ScreenSize.MEDIUM -> 32.dp
+                ScreenSize.EXPANDED -> 48.dp
             }
 
             val listState = rememberLazyListState()
@@ -91,7 +91,7 @@ fun App() {
                         start = horizontalPadding,
                         end = horizontalPadding,
                         top = when (screenSize) {
-                            ScreenSize.Medium -> 24.dp + 120.dp + 24.dp
+                            ScreenSize.MEDIUM -> 24.dp + 120.dp + 24.dp
                             else -> 24.dp + 64.dp + 24.dp
                         },
                         bottom = 24.dp,

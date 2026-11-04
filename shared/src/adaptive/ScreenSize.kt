@@ -5,9 +5,9 @@ import androidx.compose.runtime.Composable
 import androidx.window.core.layout.WindowSizeClass
 
 enum class ScreenSize {
-    Compact,
-    Medium,
-    Expanded,
+    COMPACT,
+    MEDIUM,
+    EXPANDED,
 }
 
 @Composable
@@ -17,12 +17,12 @@ fun currentScreenSize(): ScreenSize {
     return when {
         sizeClass.isWidthAtLeastBreakpoint(
             widthDpBreakpoint = WindowSizeClass.WIDTH_DP_EXPANDED_LOWER_BOUND,
-        ) -> ScreenSize.Expanded
+        ) -> ScreenSize.EXPANDED
 
         sizeClass.isWidthAtLeastBreakpoint(
             widthDpBreakpoint = WindowSizeClass.WIDTH_DP_MEDIUM_LOWER_BOUND,
-        ) -> ScreenSize.Medium
+        ) -> ScreenSize.MEDIUM
 
-        else -> ScreenSize.Compact
+        else -> ScreenSize.COMPACT
     }
 }

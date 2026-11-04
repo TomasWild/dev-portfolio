@@ -46,7 +46,7 @@ fun Navbar(
                 insets = WindowInsets.safeDrawing.only(sides = WindowInsetsSides.Top + WindowInsetsSides.Horizontal)
             ),
         shape = RoundedCornerShape(
-            size = if (screenSize == ScreenSize.Medium) {
+            size = if (screenSize == ScreenSize.MEDIUM) {
                 32.dp
             } else {
                 100.dp
@@ -57,7 +57,7 @@ fun Navbar(
         shadowElevation = 6.dp,
     ) {
         when (screenSize) {
-            ScreenSize.Medium -> {
+            ScreenSize.MEDIUM -> {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -118,7 +118,7 @@ fun Navbar(
                         },
                     )
 
-                    if (screenSize != ScreenSize.Compact) {
+                    if (screenSize != ScreenSize.COMPACT) {
                         ExpandedNavActions(
                             onItemClick = onItemClick,
                             modifier = Modifier.align(alignment = Alignment.Center),
@@ -379,7 +379,7 @@ private fun NavbarControls(
             onToggle = onToggleTheme,
         )
 
-        if (screenSize == ScreenSize.Compact) {
+        if (screenSize == ScreenSize.COMPACT) {
             CompactNavActions(onItemClick = onItemClick)
         }
     }

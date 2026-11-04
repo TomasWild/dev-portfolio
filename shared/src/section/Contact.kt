@@ -32,9 +32,9 @@ fun Contact(
             .fillMaxWidth()
             .padding(
                 vertical = when (screenSize) {
-                    ScreenSize.Compact -> 24.dp
-                    ScreenSize.Medium -> 40.dp
-                    ScreenSize.Expanded -> 56.dp
+                    ScreenSize.COMPACT -> 24.dp
+                    ScreenSize.MEDIUM -> 40.dp
+                    ScreenSize.EXPANDED -> 56.dp
                 },
             ),
         verticalArrangement = Arrangement.spacedBy(space = 24.dp),
@@ -43,7 +43,7 @@ fun Contact(
             title = stringResource(resource = Res.string.contact_title),
         )
 
-        if (screenSize == ScreenSize.Expanded) {
+        if (screenSize == ScreenSize.EXPANDED) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()

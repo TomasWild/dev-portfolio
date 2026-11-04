@@ -40,7 +40,7 @@ fun Experience(
     screenSize: ScreenSize,
     modifier: Modifier = Modifier,
 ) {
-    val isCompact = screenSize == ScreenSize.Compact
+    val isCompact = screenSize == ScreenSize.COMPACT
     var expandedIndex by rememberSaveable { mutableStateOf<Int?>(value = 0) }
 
     val experiences = listOf(
