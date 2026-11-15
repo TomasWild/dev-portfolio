@@ -61,7 +61,7 @@ fun Projects(
                 image = Res.drawable.project_dev_portfolio,
                 tags = listOf("Kotlin", "Compose Multiplatform"),
                 repositoryUrl = "https://github.com/TomasWild/dev-portfolio",
-                liveUrl = "https://tomaswild.dev",
+                liveUrl = "https://tomaswild.github.io/dev-portfolio/",
             ),
         )
 
